@@ -1,16 +1,122 @@
-Project Title: Data Engineering Challenge Slooze
-Introduction
-The goal of this project was to gather comprehensive data of products available on Alibaba, or a major e-commerce platform, and transform the raw data into meaningful insights via data cleaning and visualization techniques. This enables better understanding of product types, pricing ranges, and ratings, which are critical for market analysis and business decision-making.
-Data Collection
-Data was collected by scraping the Alibaba website using the web scraping tool Thunderbit. It automated the extraction of relevant product information including product names, URLs, images, prices, ratings, and geographical location from Alibaba’s publicly accessible web pages. The scraping strategy was designed to systematically navigate product listings and aggregate the necessary attributes efficiently.
-Data Cleaning
-The collected raw data required cleaning and preprocessing to handle inconsistencies and improve usability. Key cleaning steps included:
-•	Parsing and standardizing product names to extract single, coherent product type categories.
-•	Removing duplicates and irrelevant entries.
-•	Converting price and rating fields to appropriate numeric formats for quantitative analysis.
-•	Handling missing or incomplete data entries to ensure dataset integrity.
-Data Analysis and Visualization
-Post cleaning, the data was analyzed to identify the dominant laptop product types and their distribution across key attributes such as price and ratings. A count plot was created to visualize the frequency of different simplified product categories, providing an intuitive overview of the market composition. Additional visualizations can be developed to explore price trends, rating distributions, and geographic availability.
-Conclusion
-This project successfully scraped, cleaned, and visualized laptop product data from Alibaba, transforming raw web data into structured insights. The outcomes serve as a foundation for further exploratory analysis, competitive benchmarking, and strategic business recommendations.
+🖥️ Data Engineering Challenge – Slooze AI
+📌 Introduction
 
+This project focuses on collecting, cleaning, and analyzing laptop product data from Alibaba. Using Python (pandas, matplotlib, seaborn, regex), the raw data was transformed into meaningful insights, supporting market research, trend analysis, and business decision-making.
+
+📊 Data Collection
+
+Source: Alibaba product listings
+
+Method: Web scraping tool Thunderbit
+
+Extracted attributes:
+
+Product Name
+
+Product URL
+
+Product Image
+
+Price
+
+Rating
+
+Location
+
+Product Type
+
+🛠️ Data Cleaning & Preprocessing
+
+The raw dataset was standardized and prepared for analysis:
+
+Normalized column names.
+
+Converted Price and Rating fields into numeric types.
+
+Handled missing data (e.g., 13 missing ratings).
+
+Removed duplicate URLs and rows.
+
+Extracted keywords from product names for classification.
+
+Binned prices into ranges:
+
+0–10k, 10k–20k, 20k–50k, 50k–100k, 100k–500k, 500k+
+
+📈 Analysis & Insights
+
+The script generates key insights, including:
+
+Summary Statistics
+
+Total products: 117
+
+Distinct product types: 11
+
+Average price: ~25,189
+
+Median price: 20,000
+
+Min price: 1,290
+
+Max price: 147,500
+
+Top Product Types
+
+Gaming Laptops (26)
+
+Business Laptops (20)
+
+Student Laptops (16)
+
+Others (15)
+
+Price Range Distribution
+
+0–10k: 27 products
+
+10k–20k: 32 products
+
+20k–50k: 47 products
+
+50k–100k: 8 products
+
+100k–500k: 3 products
+
+Keyword Frequency in Product Names
+
+Most frequent: laptop, inch, ssd, intel, ram, business
+
+Anomalies Detected
+
+13 missing ratings
+
+2 duplicate product URLs
+
+No missing prices/images
+
+📉 Visualizations
+
+The notebook produces multiple plots (via matplotlib & seaborn):
+
+Distribution of product types.
+
+Price range counts.
+
+Rating distributions.
+
+Keyword frequency bar charts.
+
+✅ Conclusion
+
+This project demonstrates a complete data engineering pipeline:
+
+Data scraping from Alibaba.
+
+Cleaning & preprocessing with pandas.
+
+Exploratory data analysis (EDA) with statistical summaries.
+
+Visualization for insights.
+
+The results provide a structured view of laptop offerings, useful for market analysis, competitor benchmarking, and strategic recommendations.
